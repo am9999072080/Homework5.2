@@ -50,27 +50,27 @@ public class Main {
         System.out.println("первый вариант");
         int maximumSpend1 = -1;
         int minimumSpend1 = arr[0];
-        for (int j = 0; j < arr.length; j++) {
-            if (arr[j] > maximumSpend1) {
-                maximumSpend1 = arr[j];
+        for (int j : arr) { //использовал цикл for each.
+            if (j > maximumSpend1) {
+                maximumSpend1 = j;
             }
-            if (arr[j] < minimumSpend1) {
-                minimumSpend1 = arr[j];
+            if (j < minimumSpend1) {
+                minimumSpend1 = j;
             }
         }
-        System.out.println("Минимальная сумма трат за день составила " + minimumSpend1 + " рублей");
         System.out.println("Максимальная сумма трат за день составила " + maximumSpend1 + " рублей");
+        System.out.println("Минимальная сумма трат за день составила " + minimumSpend1 + " рублей");
 
         System.out.println("второй вариант");
         int maximumSpend2 = -1;
         int minimumSpend2 = arr[0];
         Arrays.sort(arr); //использовал метод Arrays.sort(arr) для сортировки
-        for (int i = 0; i < arr.length; i++) {
-            maximumSpend2 = arr[i];
+        for (int i : arr) { //использовал цикл for each.
+            maximumSpend2 = i;
             minimumSpend2 = arr[0];
         }
-        System.out.println("Минимальная сумма трат за день составила " + minimumSpend2 + " рублей");
         System.out.println("Максимальная сумма трат за день составила " + maximumSpend2 + " рублей");
+        System.out.println("Минимальная сумма трат за день составила " + minimumSpend2 + " рублей");
 
     }
 
